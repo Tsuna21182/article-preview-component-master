@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body>
+    <main class="card contenedor">
+      <img src="images/drawers.jpg" alt="imagen principal" />
+      <div class="card__contenido">
+        <p class="card__titulo">
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </p>
+        <p class="card__texto">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+        <div class="card__usuario">
+          <div class="usuario">
+            <div>
+              <img
+                src="images/avatar-michelle.jpg"
+                alt="imagen usuario"
+                class="img__usuario"
+              />
+            </div>
+            <div class="usuario__datos">
+              <p class="usuario__nombre">Michelle Appleton</p>
+              <p class="usuario__fecha">28 Jun 2020</p>
+            </div>
+          </div>
+          <button class="usuario__btn" id="share">
+            <img src="images/icon-share.svg" alt="icono share" />
+          </button>
+        </div>
+        <div class="share contenedor" id="linkBox">
+          <div class="share__ajuste">
+            <div class="share__redes">
+              <p class="share__texto">share</p>
+              <div class="redes">
+                <a href="#">
+                  <img src="images/icon-facebook.svg" alt="imagen redes" />
+                </a>
+                <a href="#">
+                  <img src="images/icon-twitter.svg" alt="imagen redes" />
+                </a>
+                <a href="#">
+                  <img src="images/icon-pinterest.svg" alt="imagen redes" />
+                </a>
+              </div>
+            </div>
+            <button class="usuario__btn-active">
+              <img src="images/icon-share.svg" alt="imagen share" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

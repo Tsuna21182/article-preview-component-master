@@ -1,0 +1,154 @@
+:root {
+  --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+  --GrayishBlue: hsl(212, 23%, 69%);
+  --LightGrayishBlue: hsl(210, 46%, 95%);
+  --fuente-principal: "Manrope", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.3rem;
+  font-family: var(--fuente-principal);
+  line-height: 1.5;
+  background-color: var(--LightGrayishBlue);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 2rem 2rem 0 0;
+  margin: 0;
+}
+
+[class*="contenedor"] {
+  max-width: 120rem;
+  margin: 8rem auto;
+  width: 85%;
+}
+
+/* card */
+
+.card {
+  border-radius: 2rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column; /* Apilar elementos verticalmente */
+  justify-content: space-between; /* Asegura que los elementos se distribuyan bien */
+  height: 100%; /* Permite que la tarjeta ocupe todo el espacio disponible */
+  position: relative;
+}
+
+/* card contenido */
+
+.card__contenido {
+  padding: 3rem;
+  margin: 0;
+}
+
+.card__titulo {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+.card__texto {
+  color: var(--GrayishBlue);
+  font-size: 1.4rem;
+}
+
+/* card usuario */
+
+.card__usuario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.usuario {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.img__usuario {
+  border-radius: 50%;
+  height: 5rem;
+}
+
+.usuario__nombre {
+  margin: 0;
+  font-weight: 600;
+}
+
+.usuario__fecha {
+  margin: 0;
+  color: var(--GrayishBlue);
+}
+
+.usuario__btn {
+  background-color: var(--LightGrayishBlue);
+  border: none;
+  border-radius: 50%;
+  height: 4rem;
+  cursor: pointer;
+}
+
+/* interaccion */
+
+.share {
+  display: none; /* Ocultar por defecto */
+  background-color: var(--VeryDarkGrayishBlue);
+  padding: 2rem 3rem;
+  border-radius: 0 0 2rem 2rem;
+  margin-top: 2rem; /* Espacio adicional para separar el cuadro de compartir */
+}
+
+.share.active {
+  display: block; /* Muestra el cuadro cuando es activado */
+}
+
+.card__usuario.active {
+  display: none; /* Oculta el bloque de usuario cuando se muestra el cuadro de compartir */
+}
+
+.share__ajuste {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.share__redes {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.redes a {
+  margin: 0 0.4rem;
+  display: inline-block;
+}
+
+.share__texto {
+  color: var(--LightGrayishBlue);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-right: 1rem;
+}
+
+.usuario__btn-active {
+  background-color: var(--GrayishBlue);
+  border-radius: 50%;
+  border: none;
+  height: 3rem;
+}
