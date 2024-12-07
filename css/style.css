@@ -29,6 +29,11 @@ img {
   border-radius: 2rem 2rem 0 0;
   margin: 0;
 }
+@media (min-width: 765px) {
+  img {
+    border-radius: 2rem 0 0 2rem;
+  }
+}
 
 [class*="contenedor"] {
   max-width: 120rem;
@@ -48,6 +53,18 @@ img {
   position: relative;
 }
 
+@media (min-width: 765px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+  }
+  .contenedor {
+    width: 60%;
+  }
+}
+
 /* card contenido */
 
 .card__contenido {
@@ -64,6 +81,18 @@ img {
 .card__texto {
   color: var(--GrayishBlue);
   font-size: 1.4rem;
+}
+
+@media (min-width: 765px) {
+  .card__titulo {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+  }
+  .card__texto {
+    color: var(--VeryDarkGrayishBlue);
+    font-weight: 600;
+  }
 }
 
 /* card usuario */
@@ -116,6 +145,8 @@ img {
 
 .share.active {
   display: block; /* Muestra el cuadro cuando es activado */
+  margin: 0;
+  width: 100%;
 }
 
 .card__usuario.active {
