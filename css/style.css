@@ -47,13 +47,13 @@ img {
   border-radius: 2rem;
   background-color: #fff;
   display: flex;
-  flex-direction: column; /* Apilar elementos verticalmente */
-  justify-content: space-between; /* Asegura que los elementos se distribuyan bien */
-  height: 100%; /* Permite que la tarjeta ocupe todo el espacio disponible */
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   position: relative;
 }
 
-@media (min-width: 765px) {
+@media (min-width: 1440px) {
   .card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -73,8 +73,9 @@ img {
 }
 
 .card__titulo {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.6rem;
+  color: var(--VeryDarkGrayishBlue);
   line-height: 2.2rem;
 }
 
@@ -83,15 +84,16 @@ img {
   font-size: 1.4rem;
 }
 
-@media (min-width: 765px) {
+@media (min-width: 1440px) {
   .card__titulo {
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 2.8rem;
+    line-height: 3.5rem;
     margin-bottom: 1rem;
   }
   .card__texto {
-    color: var(--VeryDarkGrayishBlue);
-    font-weight: 600;
+    color: var(--GrayishBlue);
+    font-weight: 500;
+    font-size: 1.8rem;
   }
 }
 
@@ -136,21 +138,21 @@ img {
 /* interaccion */
 
 .share {
-  display: none; /* Ocultar por defecto */
+  display: none;
   background-color: var(--VeryDarkGrayishBlue);
   padding: 2rem 3rem;
   border-radius: 0 0 2rem 2rem;
-  margin-top: 2rem; /* Espacio adicional para separar el cuadro de compartir */
+  margin-top: 2rem;
 }
 
 .share.active {
-  display: block; /* Muestra el cuadro cuando es activado */
+  display: block;
   margin: 0;
   width: 100%;
 }
 
 .card__usuario.active {
-  display: none; /* Oculta el bloque de usuario cuando se muestra el cuadro de compartir */
+  display: none;
 }
 
 .share__ajuste {
@@ -171,10 +173,11 @@ img {
 }
 
 .share__texto {
-  color: var(--LightGrayishBlue);
+  color: var(--GrayishBlue);
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   margin-right: 1rem;
+  font-weight: 900;
 }
 
 .usuario__btn-active {
@@ -182,4 +185,64 @@ img {
   border-radius: 50%;
   border: none;
   height: 3rem;
+}
+
+/* media queries */
+
+@media (min-width: 1440px) {
+  .card {
+    position: relative;
+  }
+
+  .card__usuario.active {
+    display: flex;
+  }
+
+  .usuario__btn-active {
+    display: none;
+  }
+
+  .share {
+    position: absolute;
+    left: 72rem;
+    top: 27rem;
+    border-radius: 1rem;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 75%,
+      58% 76%,
+      50% 90%,
+      39% 76%,
+      0% 75%
+    );
+  }
+
+  .share__ajuste {
+    position: relative;
+    padding: 2rem 5rem;
+    width: 120rem;
+  }
+
+  .share__redes {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+  }
+
+  .redes {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .share.active {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .share {
+    top: 25rem;
+    left: 96.5rem;
+  }
 }

@@ -5,15 +5,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (BtnShare && linkBox && cardUsuario) {
     BtnShare.addEventListener("click", () => {
-      linkBox.classList.toggle("active"); // Alterna la visibilidad del cuadro de compartir
-      cardUsuario.classList.toggle("active"); // Alterna la visibilidad del bloque de usuario
+      // Alternar visibilidad del cuadro de compartir
+      linkBox.classList.toggle("active");
+
+      // Solo en pantallas menores a 1440px, alternar visibilidad de card__usuario
+      if (window.innerWidth < 1440) {
+        cardUsuario.classList.toggle("active");
+      }
     });
 
     // Cerrar el cuadro al hacer clic fuera de él
     document.addEventListener("click", (e) => {
       if (!linkBox.contains(e.target) && e.target !== BtnShare) {
         linkBox.classList.remove("active");
-        cardUsuario.classList.remove("active");
+
+        // Solo en pantallas menores a 1440px, restablecer visibilidad de card__usuario
+        if (window.innerWidth < 1440) {
+          cardUsuario.classList.remove("active");
+        }
       }
     });
   } else {
